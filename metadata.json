@@ -1,0 +1,6 @@
+{
+  "name": "MMD Technical Support",
+  "description": "Landing page para servicios de realización técnica integral de eventos en vivo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

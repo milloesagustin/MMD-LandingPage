@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-neon-green: #39FF14;
+  --color-dark-bg: #000000;
+  --color-dark-surface: #09090b;
+  --color-dark-surface-hover: #18181b;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-dark-bg text-gray-300 font-sans antialiased selection:bg-neon-green selection:text-black;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-dark-bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-surface-hover rounded-full border-2 border-dark-bg;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+
+/* Transición continua para el carrusel de Instagram */
+.insta-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
