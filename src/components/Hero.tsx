@@ -25,9 +25,17 @@ export function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
+    // 1. PRECARGA DE IMÁGENES: Fuerza al navegador a guardarlas en caché en segundo plano
+    IMAGES.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+
+    // 2. INTERVALO DE 3 SEGUNDOS
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % IMAGES.length);
-    }, 2500); // Change image every 4 seconds
+    }, 3000); 
+    
     return () => clearInterval(interval);
   }, []);
 
